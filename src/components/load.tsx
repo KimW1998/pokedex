@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import PokemonDiscoverPage from "../pages.tsx/PokemonDiscoverPage";
+import { useNavigate, useParams } from "react-router-dom";
 
 export type ApiPokemon = {
   name: string;
@@ -8,6 +9,9 @@ export type ApiPokemon = {
 
 const LoadPokemons = () => {
   const [pokemons, setPokemons] = useState<ApiPokemon[]>();
+  const [filter, setFilter] = useState("");
+  const params = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const FetchData = async () => {
@@ -23,18 +27,41 @@ const LoadPokemons = () => {
       );
     };
     FetchData();
+    if (params.filter) {
+      setFilter(params.filter);
+    } else {
+      setFilter("");
+    }
   }, []);
+
+  const updateFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFilter(e.target.value);
+    navigate(`/discover/${e.target.value}`);
+  };
 
   return (
     <div>
-      <p>Pokemons:</p>
-      {pokemons ? (
-        pokemons.map((pokemon) => {
-          return <PokemonDiscoverPage pokemon={pokemon} />;
-        })
-      ) : (
-        <p>Loading pokemons...</p>
-      )}
+      <p>
+        Search Pokemon:{" "}
+        <input
+          type="text"
+          value={filter}
+          placeholder="Name"
+          onChange={updateFilter}
+        />
+      </p>
+      <div>
+        <p>Pokemons:</p>
+        {pokemons ? (
+          pokemons
+            .filter((pokemon) => pokemon.name.startsWith(filter))
+            .map((pokemon, i) => {
+              return <PokemonDiscoverPage key={i} pokemon={pokemon} />;
+            })
+        ) : (
+          <p>Loading pokemons...</p>
+        )}
+      </div>
     </div>
   );
 };

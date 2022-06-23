@@ -15,7 +15,9 @@ function App() {
       </div>
 
       <Routes>
-        <Route path="/discover" element={<LoadPokemons />} />
+        <Route path="/discover" element={<LoadPokemons />}>
+          <Route path=":filter" element={<LoadPokemons />} />
+        </Route>
         <Route path="/about" element={<AboutPage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/details/:pokemon_name" element={<PokemonDetailPage />} />
