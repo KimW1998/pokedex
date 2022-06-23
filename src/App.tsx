@@ -2,7 +2,7 @@ import "./App.css";
 import { Routes, Route, NavLink } from "react-router-dom";
 import HomePage from "./pages.tsx/HomePage";
 import AboutPage from "./pages.tsx/AboutPage";
-
+import PokemonDetailPage from "./pages.tsx/PokemonDetailPage";
 import LoadPokemons from "./components/load";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Route path="/discover" element={<LoadPokemons />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/" element={<HomePage />} />
-        <Route path="/details/:pokemon_name" element={<LoadPokemons />} />
+        <Route path="/details/:pokemon_name" element={<PokemonDetailPage />} />
       </Routes>
     </div>
   );
