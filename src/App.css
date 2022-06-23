@@ -60,6 +60,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  min-height: 700px !important;
 }
 
 .pokemon-detail-container {
@@ -86,7 +87,7 @@
 .Pokemon-discover-card {
   border: solid 2px pink;
   width: 300px !important;
-  height: 500px;
+  height: 500px !important;
   margin: 20px 20px;
 }
 
