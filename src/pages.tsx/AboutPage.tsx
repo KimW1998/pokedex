@@ -1,5 +1,9 @@
 const AboutPage = () => {
-  return <h1>AboutPage</h1>;
+  return (
+    <div className="pokemon-about-container">
+      <h1>Homepage</h1>
+    </div>
+  );
 };
 
 export default AboutPage;

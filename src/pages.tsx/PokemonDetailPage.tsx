@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Card from "react-bootstrap/Card";
 
 type pokemonSprites = {
   front_default: string;
@@ -39,16 +40,34 @@ const PokemonDetailPage = () => {
   }, []);
 
   return pokemonsDetails ? (
-    <div>
-      <h2>{pokemonsDetails.name}</h2>
-      <img src={pokemonsDetails.sprites.front_default} alt="front pokemon" />
-      <p>
-        Types:{" "}
-        {pokemonsDetails.types.map((typeObj) => (
-          <span>{typeObj.type.name} </span>
-        ))}
-      </p>
-      <p>Weight: {pokemonsDetails.weight} hectograms</p>
+    <div className="pokemon-detail-container ">
+      <Card
+        className="Pokemon-detail-card"
+        border="dark"
+        style={{ width: "18rem" }}
+        bg="info"
+      >
+        <Card.Header className="pokemon-detail-name">
+          {pokemonsDetails.name}
+        </Card.Header>
+        <div className="img-detail-container">
+          <Card.Img
+            variant="top"
+            src={pokemonsDetails.sprites.front_default}
+            alt="front pokemon"
+            className="img-detail-card"
+          />
+        </div>
+        <Card.Body className="card-detail-text">
+          <p>
+            Types:{" "}
+            {pokemonsDetails.types.map((typeObj) => (
+              <span>{typeObj.type.name} </span>
+            ))}
+          </p>
+          <p>Weight: {pokemonsDetails.weight} hectograms</p>
+        </Card.Body>
+      </Card>
     </div>
   ) : (
     <p>Loading ...</p>

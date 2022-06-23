@@ -1,5 +1,17 @@
 .App {
   text-align: center;
+  background-color: #81ae72;
+}
+
+.background-image {
+  background-image: url("backgroundPokemon.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right -300px;
+}
+
+.container-app {
+  padding: 0px 50px;
 }
 
 .App-logo {
@@ -28,9 +40,94 @@
   color: #61dafb;
 }
 
+.Navbar {
+  margin: 0px 0px 20px 0px;
+  border: solid 2px black;
+  padding: 20px 0px;
+}
+
 .Navbar > a {
-  font-weight: bold;
   margin: 10px;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  text-decoration: none;
+  color: black;
+  border: solid 1px black;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.pokemon-discover-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pokemon-detail-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 1000px;
+}
+
+.pokemon-home-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 1000px;
+}
+
+.pokemon-about-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 1000px;
+}
+
+.Pokemon-discover-card {
+  border: solid 2px pink;
+  width: 300px !important;
+  height: 500px;
+  margin: 20px 20px;
+}
+
+.Pokemon-detail-card {
+  border: solid 2px pink;
+  width: 400px !important;
+  height: 600px !important;
+  margin: 20px 20px;
+}
+
+.img-discover-card {
+  border-bottom: solid 1px black;
+  padding: 10px;
+}
+
+.img-detail-container {
+  border-bottom: solid 1px black;
+}
+
+.img-detail-card {
+  width: 250px !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pokemon-discover-name {
+  color: black;
+  font-size: 30px;
+  text-transform: capitalize;
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.pokemon-detail-name {
+  color: black;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.card-detail-text {
+  font-family: "Crimson Text", serif;
 }
 
 @keyframes App-logo-spin {

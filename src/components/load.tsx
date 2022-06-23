@@ -52,15 +52,17 @@ const LoadPokemons = () => {
       </p>
       <div>
         <p>Pokemons:</p>
-        {pokemons ? (
-          pokemons
-            .filter((pokemon) => pokemon.name.startsWith(filter))
-            .map((pokemon, i) => {
-              return <PokemonDiscoverPage key={i} pokemon={pokemon} />;
-            })
-        ) : (
-          <p>Loading pokemons...</p>
-        )}
+        <div className="pokemon-discover-container ">
+          {pokemons ? (
+            pokemons
+              .filter((pokemon) => pokemon.name.startsWith(filter))
+              .map((pokemon, i) => {
+                return <PokemonDiscoverPage key={i} pokemon={pokemon} />;
+              })
+          ) : (
+            <p>Loading pokemons...</p>
+          )}
+        </div>
       </div>
     </div>
   );

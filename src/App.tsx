@@ -8,20 +8,26 @@ import LoadPokemons from "./components/load";
 function App() {
   return (
     <div className="App">
-      <div className="Navbar">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">AboutPage</NavLink>
-        <NavLink to="/discover">PokemonDiscoverPage</NavLink>
+      <div className="background-image">
+        <div className="Navbar">
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">AboutPage</NavLink>
+          <NavLink to="/discover">PokemonDiscoverPage</NavLink>
+        </div>
+        <div className="container-app">
+          <Routes>
+            <Route path="/discover" element={<LoadPokemons />}>
+              <Route path=":filter" element={<LoadPokemons />} />
+            </Route>
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route
+              path="/details/:pokemon_name"
+              element={<PokemonDetailPage />}
+            />
+          </Routes>
+        </div>
       </div>
-
-      <Routes>
-        <Route path="/discover" element={<LoadPokemons />}>
-          <Route path=":filter" element={<LoadPokemons />} />
-        </Route>
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/" element={<HomePage />} />
-        <Route path="/details/:pokemon_name" element={<PokemonDetailPage />} />
-      </Routes>
     </div>
   );
 }
