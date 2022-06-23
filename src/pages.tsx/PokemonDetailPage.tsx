@@ -37,7 +37,7 @@ const PokemonDetailPage = () => {
     };
 
     FetchData();
-  }, [routeParams.pokemon_name]);
+  }, []);
 
   return pokemonsDetails ? (
     <div className="pokemon-detail-container ">
