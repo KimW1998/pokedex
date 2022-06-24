@@ -24,6 +24,13 @@
   max-width: 100%;
 }
 
+@media screen and (max-width: 480px) {
+  .logo-pokemon {
+    width: 200px;
+    height: auto;
+  }
+}
+
 .search-text {
   font-family: "Kdam Thmor Pro", sans-serif;
   font-size: 20px;
