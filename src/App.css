@@ -23,6 +23,10 @@
   height: 200px;
 }
 
+.search-text {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 20px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -64,7 +68,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  min-height: 100px !important;
 }
 
 .pokemon-detail-container {
@@ -151,6 +154,9 @@
 
 .card-detail-text {
   font-family: "Crimson Text", serif;
+  text-align: left;
+  font-size: 30px;
+  text-decoration: underline;
 }
 
 @keyframes App-logo-spin {

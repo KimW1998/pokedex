@@ -15,11 +15,21 @@ type PokemonTypes = {
   type: typePokemon;
 };
 
+type PokemonAbilities = {
+  ability: abilityPokemon;
+};
+
+type abilityPokemon = {
+  name: string;
+};
+
 export type pokemonsDetailsProps = {
   name: string;
   weight: number;
   types: PokemonTypes[];
   sprites: pokemonSprites;
+  height: number;
+  abilities: PokemonAbilities[];
 };
 
 const PokemonDetailPage = () => {
@@ -65,7 +75,14 @@ const PokemonDetailPage = () => {
               <span>{typeObj.type.name} </span>
             ))}
           </p>
-          <p>Weight: {pokemonsDetails.weight} hectograms</p>
+          <p>Weight: {pokemonsDetails.weight} grams</p>
+          <p>height: {pokemonsDetails.height} cm</p>
+          <p>
+            Ability:{" "}
+            {pokemonsDetails.abilities.map((typeObj) => (
+              <span>{typeObj.ability.name} </span>
+            ))}
+          </p>
         </Card.Body>
       </Card>
     </div>

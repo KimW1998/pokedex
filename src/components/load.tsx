@@ -43,7 +43,7 @@ const LoadPokemons = () => {
 
   return (
     <div>
-      <p>
+      <p className="search-text">
         Search Pokemon:{" "}
         <input
           type="text"
