@@ -53,7 +53,7 @@ const LoadPokemons = () => {
         />
       </p>
       <div>
-        <p>Pokemons:</p>
+        <img src="pokemon.png" alt="pokemon logo" className="logo-pokemon" />
         <div className="pokemon-discover-container ">
           {pokemons ? (
             pokemons
