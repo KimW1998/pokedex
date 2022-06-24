@@ -13,14 +13,13 @@ const PokemonDiscoverPage = ({ pokemon }: props) => {
         className="Pokemon-discover-card"
         border="dark"
         style={{ width: "18rem" }}
-        bg="info"
       >
         <Card.Img
           variant="top"
           src="faviconpoke.ico"
           className="img-discover-card"
         />
-        <Card.Body>
+        <Card.Body className="pokemon-body-card">
           <div className="pokemon-discover-name">{pokemon.name}</div>
           <NavLink to={`/details/${pokemon.name}`}>See more</NavLink>
         </Card.Body>

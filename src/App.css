@@ -60,7 +60,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  min-height: 700px !important;
+  min-height: 100px !important;
 }
 
 .pokemon-detail-container {
@@ -86,9 +86,9 @@
 
 .Pokemon-discover-card {
   border: solid 2px pink;
-  width: 300px !important;
-  height: 500px !important;
-  margin: 20px 20px;
+  width: 200px !important;
+  height: 300px !important;
+  margin: 10px 20px !important;
 }
 
 .Pokemon-detail-card {
@@ -101,6 +101,20 @@
 .img-discover-card {
   border-bottom: solid 1px black;
   padding: 10px;
+}
+
+.pokemon-body-card {
+  background-color: rgb(242, 89, 89) !important;
+}
+
+.pokemon-body-card > a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border: solid 1px black;
+  border-radius: 10px;
+  padding: 5px 20px;
+  margin: 20px 0px;
 }
 
 .img-detail-container {
