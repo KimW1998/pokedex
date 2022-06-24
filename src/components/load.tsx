@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 export type ApiPokemon = {
   name: string;
+  url: string;
 };
 
 const LoadPokemons = () => {
@@ -22,6 +23,7 @@ const LoadPokemons = () => {
         response.data.results.map((apiPokemon: ApiPokemon) => {
           return {
             name: apiPokemon.name,
+            url: apiPokemon.url,
           };
         })
       );

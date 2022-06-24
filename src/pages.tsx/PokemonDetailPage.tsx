@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 
-type pokemonSprites = {
+export type pokemonSprites = {
   front_default: string;
 };
 
@@ -15,7 +15,7 @@ type PokemonTypes = {
   type: typePokemon;
 };
 
-type pokemonsDetailsProps = {
+export type pokemonsDetailsProps = {
   name: string;
   weight: number;
   types: PokemonTypes[];
