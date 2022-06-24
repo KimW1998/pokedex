@@ -21,6 +21,7 @@
 
 .logo-pokemon {
   height: 200px;
+  max-width: 100%;
 }
 
 .search-text {
