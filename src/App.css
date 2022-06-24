@@ -89,6 +89,7 @@
   height: 300px !important;
   margin: 10px 20px !important;
   border: none !important;
+  background-color: transparent !important;
 }
 
 .Pokemon-detail-card {
@@ -101,10 +102,13 @@
 .img-discover-card {
   padding: 10px;
   border: solid 1px black;
+
+  display: block;
 }
 
 .pokemon-body-card {
   background-color: rgb(242, 89, 89) !important;
+  border: solid 1px black;
 }
 
 .pokemon-body-card > a {

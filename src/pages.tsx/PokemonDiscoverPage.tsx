@@ -25,15 +25,12 @@ const PokemonDiscoverPage = ({ pokemon }: props) => {
 
   return (
     <div className="pokemon-discover-container">
-      <Card
-        className="Pokemon-discover-card"
-        border="dark"
-        style={{ width: "18rem" }}
-      >
+      <Card className="Pokemon-discover-card" style={{ width: "18rem" }}>
         {pokemonsDetails ? (
           <Card.Img
             variant="top"
             src={pokemonsDetails.sprites.front_default}
+            alt="front pokemon"
             className="img-discover-card"
           />
         ) : (
